@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+//
+// 功能说明：首页样式
+// @author maoxiaomi
+// @date 2015-01-04
+//
+
+
+@import "../base/reset";
+@import "../base/mixins";
+@import "../base/font-awesome";
+
+.pri-title {
+	font-size: $fontsize8;
+	text-align: center;
+	margin-top: 50px;
+}
+
+@mixin circle($diameter) {
+  	display: block;
+	height: $diameter;
+	width: $diameter;
+	border-radius: 50%;
+	text-align: center;
+	line-height: $diameter;
+	color: $black;
+	text-shadow: $fLightGray 2px 3px 2px;
+}
+
+.circles {
+	width: 296px;
+	margin: 10px auto;
+	position: relative;
+	height: 220px;
+	font-size: $fontsize4;
+}
+
+.small-circle {
+	@include circle(95px);
+	position: absolute;
+	top: 18px;
+	left: 0;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.medium-circle {
+	@include circle(100px);
+	position: absolute;
+	top: 80px;
+	right: 0;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.large-circle {
+	@include circle(150px);
+	position: absolute;
+	top: 40px;
+	left: 62px;
+	font-size: $fontsize8;
+}
+
+$yellow: #F1DFB6;
+$purple: #C4CBF1;
+$red: #F9E2E3;
+.yellow {
+	background-color: $yellow;
+}
+
+.purple {
+	background-color: $purple;
+}
+
+.red {
+	background-color: $red;
+}
+
+.sec-title {
+	font-size: $fontsize6;
+	text-align: center;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	@include box-shadow(0 -5px 3px -4px #c8c8c8);
+	font-size: $fontsize2;
+	li {
+		float: left;
+		width: 33.3%;
+		text-align: center;
+		padding: 10px 0;
+	}
+	i {
+		display: block;
+	}
+}

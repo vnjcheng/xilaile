@@ -1,0 +1,56 @@
+@charset "utf-8";
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, input { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+// 参见https://bugs.webkit.org/show_bug.cgi?id=84186，让移动浏览器不要自己调整字体大小
+h1,div {max-height: 100000px;}
+
+// 基本样式
+// 字体 
+$numberFont: "Arial";
+$textFont: "黑体";
+$specialFont: "微软雅黑";
+
+$white: #ffffff;
+$fDarkGray: #333333;
+$fNormalGray: #666666;
+$fLightGray: #999999;
+$black: #000000;
+$lineHeight: 1.5;
+
+// 字号
+$fontsize1: 1.0rem;
+$fontsize2: 1.2rem;
+$fontsize3: 1.3rem;
+$fontsize4: 1.4rem;
+$fontsize5: 1.5rem;
+$fontsize6: 1.6rem;
+$fontsize7: 1.8rem;
+$fontsize8: 2.0rem;
+$fontsize81: 2.1rem;
+$fontsize9: 3.0rem;
+$fontsize10: 3.4rem;
+
+html{ font-size: 10px; font-family:$textFont; } // rem的基准，谨慎修改
+body{ background-color: $white; line-height:$lineHeight; color:$black; text-align:left; }
+a{ color:$fDarkGray; text-decoration:none; }
+.clearfix{
+    zoom: 1;
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+
+

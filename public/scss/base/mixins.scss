@@ -1,0 +1,182 @@
+// Box shadow
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+// Gradients
+@mixin gradient($color-form, $color-to) {
+  background: $color-form; // Old browsers
+  background: -moz-linear-gradient(top, $color-form 0%, $color-to 100%); // FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-form), color-stop(100%,$color-to)); // Chrome,Safari4+
+  background: -webkit-linear-gradient(top, $color-form 0%, $color-to 100%); // Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, $color-form 0%, $color-to 100%); // Opera 11.10+
+  background: -ms-linear-gradient(top, $color-form 0%, $color-to 100%); // IE10+
+  background: linear-gradient(to bottom, $color-form 0%, $color-to 100%); // W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-form', endColorstr='$color-to',GradientType=0 ); // IE6-9
+
+}
+
+
+// Transforms
+// --------------------------------------------------
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+}
+@mixin transform-origin($pos...) {
+  -webkit-transform-origin: $pos;
+      -ms-transform-origin: $pos;
+          transform-origin: $pos;
+}
+
+
+// Transitions
+// --------------------------------------------------
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-property($property...) {
+  -webkit-transition-property: $property;
+     -moz-transition-property: $property;
+          transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+  -webkit-transition-duration: $duration;
+     -moz-transition-duration: $duration;
+          transition-duration: $duration;
+}
+@mixin transition-timing-function($function...) {
+  -webkit-transition-timing-function: $function;
+     -moz-transition-timing-function: $function;
+          transition-timing-function: $function;
+}
+
+
+// Animations
+// --------------------------------------------------
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+     -moz-animation: $animation;
+          animation: $animation;
+}
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+     -moz-animation-name: $name;
+          animation-name: $name;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+          animation-duration: $duration;
+}
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+          animation-direction: $direction;
+}
+@mixin animation-play-state($direction) {
+  -webkit-animation-play-state: $direction;
+     -moz-animation-play-state: $direction;
+          animation-play-state: $direction;
+}
+
+// box flex
+@mixin display-box-flex(){
+  display:-moz-box; 
+  display:-webkit-box; 
+  display:box;
+}
+@mixin box-flex($num){
+  -webkit-box-flex:$num;
+  -moz-box-flex:$num;
+  box-flex:$num;
+}
+
+// Flex
+@mixin display-flex() {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: box;
+    display: flexbox;
+    display: flex;
+}
+
+@mixin flex-align($val) {
+    @if $val == vertical {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -moz-box-align: center;
+    } @else {
+
+    }
+}
+
+@mixin flex-flow($flow) {
+    flex-flow: $flow;
+    -webkit-flex-flow: $flow;
+    -moz-flex-flow: $flow;
+}
+
+@mixin flex-direction($val) {
+    flex-direction: $val;
+    -moz-flex-direction: $val;
+    -webkit-flex-direction: $val;
+}
+
+@mixin flex-grow($val) {
+    flex-grow: $val;
+    -webkit-flex-grow: $val;
+    -moz-flex-grow: $val;
+    -webkit-box-flex: $val;
+    box-flex: $val;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  align-items: $align;
+}
+
+@mixin flex($num) {
+  -webkit-flex: $num;
+  -moz-flex: $num;
+  flex: $num;
+}
+
+@mixin flex-order($num) {
+  order: $num;
+  -webkit-order: $num;
+  -moz-order: $num;
+}
+
+// clearfix
+@mixin clearfix($position...){
+  &{
+    zoom: 1;
+    @each $member in $position {
+      &:#{$member}{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        overflow: hidden
+      }
+    }
+  }
+}
+
+// calc
+@mixin calc($property, $expression, $width) {
+    #{$property}: $width;
+    #{$property}: calc(#{$expression});
+    #{$property}: -wekbit-calc(#{$expression});
+    #{$property}: -moz-calc(#{$expression});
+}
