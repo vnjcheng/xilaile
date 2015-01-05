@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+//
+// 功能说明：选择商品样式
+// @author maoxiaomi
+// @date 2015-01-05
+//
+
+
+@import "../base/reset";
+
+
+.prev-page {
+	display: block;
+	color: $white;
+	background-color: $mainColor;
+	padding: 10px 0;
+	text-align: center;
+	font-size: $fontsize4;
+}
+
+table {
+	margin-top: 10px;
+	width: 100%;
+	font-size: $fontsize4;
+	margin-left: 20px;
+	height: 100px;
+	td {
+		vertical-align: middle;
+	}
+	tr > td:first-child {
+		width: 30%;
+		text-align: center;
+	}
+
+	select {
+		width: 80%;
+		height: 30px;
+	}
+}
+
+.line {
+	margin-left: 20px;
+	width: 100%;
+	border-top: 1px solid #d8d8d8;
+	margin-top: 10px;
+}

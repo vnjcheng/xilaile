@@ -106,6 +106,7 @@ $BORDER: #d8d8d8;
 	padding: 10px 20px;
 	box-shadow: 0 1px 3px 2px #c6c6c6;
 	max-height: 80px;
+	overflow: auto;
 	& > p {
 		font-size: $fontsize6;
 		color: $fDarkGray;
