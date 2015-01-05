@@ -1,0 +1,73 @@
+@charset "utf-8";
+//
+// 数量选择.scss
+//
+// 功能说明: maoxiaomi
+// @create: 2014-01-05
+// @update: 
+//
+$height: 23px;
+$cColor: #dbdbdb;
+
+.num-choose {
+    span {
+        width: 23px;
+        display: inline-block;
+        height: $height;
+        line-height: $height;
+        text-align: center;
+        border: 1px solid $cColor; 
+        font-size: $fontsize6;
+        float: left;
+        color: #666666;
+    }
+
+    span:first-child {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+
+    span:last-child {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+
+    input {
+        width: 35.5px;
+        height: 25px;
+        float: left;
+        // border: 2px solid $cColor;
+        background-color: $cColor;
+        text-align: center;
+        line-height: $height;
+        color: #333333;
+        border-radius: 0;
+        font-size: $fontsize6;
+        font-family: "Arial";
+    }
+    span:first-child.disabled {
+        border: 1px solid $cColor;
+        color: #999999;
+        border-right: 1px solid $cColor;
+    }
+    input.disabled {
+        background-color: #999999;
+    }
+    span:last-child.disabled {
+        border: 1px solid $cColor;
+        color: #999999;
+        border-left: 1px solid $cColor;
+    }
+}
+
+.num-choose.disabled {
+    span {
+        border: 1px solid $cColor !important;
+    }
+    input {
+        background-color: #999999;
+    }
+    span {
+        color: #999999;
+    }
+}

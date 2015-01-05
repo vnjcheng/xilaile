@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+//
+// 功能说明：选择商品样式
+// @author maoxiaomi
+// @date 2015-01-05
+//
+
+
+@import "../base/reset";
+@import "../base/num";
+
+.prev-page {
+	background-color: $mainColor;
+	color: $white;
+	text-align: center;
+	font-size: $fontsize6;
+	padding: 10px 0;
+	display: block;
+	position: fixed;
+	width: 100%;
+}
+
+$BORDER: #d8d8d8;
+.tab {
+	overflow: auto;
+	border-bottom: 1px solid $BORDER;
+	position: fixed;
+	width: 100%;
+	margin-top: 44px; 
+	background-color: $white;
+	li {
+		float: left;
+		width: 33.3%;
+		border-right: 1px solid $BORDER;
+		box-sizing: border-box; 
+		text-align: center;
+		margin: 10px 0;
+		font-size: $fontsize3;
+		color: $fNormalGray;
+		position: relative;
+	}
+	li:last-child {
+		border-right: none;
+	}
+	li.active:after {
+		position: absolute;
+		height: 3px;
+		width: 50%;
+		content: '';
+		display: block;
+		background-color: $mainColor;
+		bottom: -10px;
+		left: 25%;
+	}
+}
+
+.tab-content {
+	padding-top: 85px;
+	padding-bottom: 145px;
+	.tab-pane {
+		display: none;
+
+		.items {
+			overflow: auto;
+			& > p {
+				font-size: $fontsize6;
+				font-weight: bold;
+				margin: 10px;
+			}
+
+			& > p:before {
+				content: '';
+				display: inline-block;
+				width: 4px;
+				height: 15px;
+				background: $mainColor;
+				position: relative;
+				top: 2px;
+				margin-right: 5px;
+			}
+
+			& > ul > li {
+				float: left;
+				width: 33.3%;
+				text-align: center;
+				overflow: hidden;
+				margin-bottom: 10px;
+			}
+
+			.item-image {
+				width: 80%;
+				margin-left: 10%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.num-choose {
+				position: relative;
+				left: 50%;
+				margin-left: -46px;
+			}
+		}
+	}
+	.tab-pane.active {
+		display: block;
+	}
+}
+
+.basket {
+	position: fixed;
+	bottom: 0;
+	background-color: $white;
+	width: 100%;
+	padding: 10px 20px;
+	box-shadow: 0 1px 3px 2px #c6c6c6;
+	max-height: 150px;
+	& > p {
+		font-size: $fontsize6;
+		color: $fDarkGray;
+	}
+
+	p:last-child {
+		margin-top: 10px;
+	}
+
+	.num-choose {
+		position: relative;
+		top: 7px;
+	}
+
+	li {
+		margin-bottom: 5px;
+		color: $mainColor1;
+		font-weight: bold;
+		font-size: $fontsize4;
+	}
+
+	.price {
+		color: $fNormalGray;
+		font-size: $fontsize4;
+		color: $mainColor1;
+		font-weight: bold;
+	}
+	.price:before {
+		content: '￥';
+		font-family: "微软雅黑";
+	}
+
+	.total-price {
+		font-size: $fontsize6;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.submit {
+	display: block;
+	float: right;
+	margin-right: 40px;
+	padding: 4px 0;
+	width: 128px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: $fontsize6;
+	color: $white;
+	background-color: $mainColor2;
+}

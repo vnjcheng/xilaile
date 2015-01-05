@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+	<title>商品详情</title>
+
+	<!-- 外部样式引入开始 -->
+	<link rel="stylesheet" type="text/css" href="../../public/css/site/choose.css">
+	<!-- 外部样式引入结束 -->
+
+	<!-- 通用js引入开始 -->
+	<script type="text/javascript" src="../../public/js/commonJS/zepto.min.js"></script>
+	<script type="text/javascript" src="../../public/js/commonJS/dialog.js"></script>
+	<script type="text/javascript" src="../../public/js/commonJS/choosenum.js"></script>
+	<!-- 通用js引入结束 -->
+
+	<!-- 页面js -->
+	<script type="text/javascript" src="../../public/js/site/choose.js"></script>
+	<!-- 页面js -->
+</head>
+<body>
+	<a class="prev-page" href="javascript:history.go(-1);">上一步</a>
+	<ul class="tab">
+		<li class="active">洗衣衣</li>
+		<li>洗鞋鞋</li>
+		<li>洗包包</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active">
+			<div class="items">
+				<p>35元专区</p>
+				<ul>
+					<li id="1" price="35">
+						<div class="item-image">
+							<img src="../../public/images/cloth_01.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+					<li id="2" price="35">
+						<div class="item-image">
+							<img src="../../public/images/cloth_02.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+					<li id="3" price="35">
+						<div class="item-image">
+							<img src="../../public/images/cloth_03.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+					<li id="4" price="35">
+						<div class="item-image">
+							<img src="../../public/images/cloth_02.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+					<li id="5" price="35">
+						<div class="item-image">
+							<img src="../../public/images/cloth_03.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+				</ul>
+			</div>
+			<div class="items">
+				<p>25元专区</p>
+				<ul>
+					<li id="6" price="25">
+						<div class="item-image">
+							<img src="../../public/images/cloth_04.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+					<li id="7" price="25">
+						<div class="item-image">
+							<img src="../../public/images/cloth_01.ico">
+						</div>
+						<div class="num-choose">
+                            <span class="disabled">-</span>
+                            <input type="text" readonly="readonly" value="0"/>
+                            <span class="">+</span>
+                        </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tab-pane">洗鞋鞋</div>
+		<div class="tab-pane">洗包包</div>
+	</div>
+	<div class="basket hide">
+		<!-- <p>洗衣袋</p> -->
+		<ul id="chooseList">
+			
+		</ul>
+		<p>
+			总计<span class="price total-price">0</span>
+			<a href="#" class="submit" id="submit">结算</a>
+		</p>
+	</div>
+
+	<form id="submitForm" method="POST" action="">
+		<input name='params' type="hidden"/>
+	</form>
+</body>
+</html>

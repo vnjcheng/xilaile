@@ -13,6 +13,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 h1,div {max-height: 100000px;}
 
 // 基本样式
+// 基础色
+$mainColor: #33bd61; // 绿色
+$mainColor1: #fa8468; // 粉色
+$mainColor2: #f99d1c; // 橙色
 // 字体 
 $numberFont: "Arial";
 $textFont: "黑体";
