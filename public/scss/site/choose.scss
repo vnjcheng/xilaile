@@ -10,16 +10,16 @@
 @import "../base/reset";
 @import "../base/num";
 
-.prev-page {
-	background-color: $mainColor;
-	color: $white;
-	text-align: center;
-	font-size: $fontsize6;
-	padding: 10px 0;
-	display: block;
-	position: fixed;
-	width: 100%;
-}
+// .prev-page {
+// 	background-color: $mainColor;
+// 	color: $white;
+// 	text-align: center;
+// 	font-size: $fontsize6;
+// 	padding: 10px 0;
+// 	display: block;
+// 	position: fixed;
+// 	width: 100%;
+// }
 
 $BORDER: #d8d8d8;
 .tab {
@@ -27,8 +27,8 @@ $BORDER: #d8d8d8;
 	border-bottom: 1px solid $BORDER;
 	position: fixed;
 	width: 100%;
-	margin-top: 44px; 
 	background-color: $white;
+	z-index: 111;
 	li {
 		float: left;
 		width: 33.3%;
@@ -56,7 +56,7 @@ $BORDER: #d8d8d8;
 }
 
 .tab-content {
-	padding-top: 85px;
+	padding-top: 45px;
 	padding-bottom: 145px;
 	.tab-pane {
 		display: none;
@@ -116,7 +116,7 @@ $BORDER: #d8d8d8;
 	width: 100%;
 	padding: 10px 20px;
 	box-shadow: 0 1px 3px 2px #c6c6c6;
-	max-height: 150px;
+	max-height: 80px;
 	& > p {
 		font-size: $fontsize6;
 		color: $fDarkGray;
@@ -129,6 +129,13 @@ $BORDER: #d8d8d8;
 	.num-choose {
 		position: relative;
 		top: 7px;
+	}
+
+	ul {
+		position: relative;
+		left: 70px;
+		top: -21px;
+		margin-bottom: -20px;
 	}
 
 	li {

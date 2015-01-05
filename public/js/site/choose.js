@@ -51,7 +51,7 @@ $(function() {
 				var submitdata = self.submitdata;
 
 				if (!$('#type_' + price).length && index !== 0) {
-					var template = '<li id="type_' + price + '"><span class="peace-price price">' + price + '</span> × <span name="count">0</span> = <span class="peace-total price">0</span></li>';
+					var template = '<li id="type_' + price + '"><span class="peace-price price">' + price + '</span> × <span name="count">0</span> = <span class="peace-total price">0</span>元</li>';
 
 					$('#chooseList').append(template);
 				}
