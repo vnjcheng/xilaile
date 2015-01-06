@@ -75,6 +75,12 @@ $BORDER: #d8d8d8;
 				text-align: center;
 				overflow: hidden;
 				margin-bottom: 10px;
+
+				p {
+					font-size: $fontsize4;
+					color: $fDarkGray;
+					padding-bottom: 5px;
+				}
 			}
 
 			.item-image {
