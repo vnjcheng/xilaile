@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+	<title>商品详情</title>
+
+	<!-- 外部样式引入开始 -->
+	<link rel="stylesheet" type="text/css" href="../../public/css/site/addOrder.css">
+	<!-- 外部样式引入结束 -->
+
+	<!-- 通用js引入开始 -->
+	<script type="text/javascript" src="../../public/js/commonJS/zepto.min.js"></script>
+	<script type="text/javascript" src="../../public/js/commonJS/dialog.js"></script>
+	<!-- 通用js引入结束 -->
+
+	<!-- 页面js -->
+	<script type="text/javascript" src="../../public/js/site/addOrder.js"></script>
+	<!-- 页面js -->
+</head>
+<body>
+	<!-- 下单主流程开始 -->
+	<div id="addressList">
+		<a href="javascript:history.go(-1);"  class="prev-page">上一步</a>
+		<table>
+			<tr>
+				<td>预约日期</td>
+				<td>
+					<select>
+						<option>2014-01-05</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>预约时段</td>
+				<td>
+					<select>
+						<option>10:00</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<div class="line"></div>
+		<ul class="list">
+			<li>
+				<div class="item">
+					<div class="item-check"><input type="radio" name="address" placeholder="请选择地址" value="1"/></div>
+					<div class="item-info">
+						<p>程文晶 15651869865</p>
+						<p>江苏省南京市</p>
+					</div>
+				</div>
+				<div class="operate">
+					<a class="item-edit" href="javascript:void(0);">编辑</a>
+					<a class="item-delete" href="javascript:void(0);">删除</a>
+				</div>			
+			</li>
+			<li>
+				<div class="item">
+					<div class="item-check"><input type="radio" name="address" placeholder="请选择地址" value="2"/></div>
+					<div class="item-info">
+						<p>程文晶 15651869865</p>
+						<p>江苏省南京市</p>
+					</div>
+				</div>
+				<div class="operate" id="1">
+					<a class="item-edit" href="javascript:void(0);">编辑</a>
+					<a class="item-delete" href="javascript:void(0);">删除</a>
+				</div>			
+			</li>
+			<li id="add">
+				<div><i class="icon-plus"></i>新增地址</div>			
+			</li>
+		</ul>
+		<div class="bottom" id="submit">
+			<a href="javascript:void(0);">
+				立即下单
+			</a>
+		</div>
+	</div>
+	<!-- 下单主流程结束 -->
+	<!-- 下单分支保存地址开始 -->
+	<div id="addAddress" class="hide">
+		<a href="javascript:void(0);"  class="title">添加地址</a>
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td>
+					<input type="text" placeholder="请填写姓名"/>
+				</td>
+			</tr>
+			<tr>
+				<td>手机号码</td>
+				<td>
+					<input type="text" placeholder="请填写手机号码"/>
+				</td>
+			</tr>
+		</table>
+		<div class="line"></div>
+		<table>
+			<tr>
+				<td>选择区域</td>
+				<td>
+					<select>
+						<option>2014-01-05</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>详细地址</td>
+				<td>
+					<textarea  placeholder="请填写详细地址"></textarea>
+				</td>
+			</tr>
+		</table>
+		<div class="bottom" id="save">
+			<a href="javascript:void(0);">
+				保存
+			</a>
+		</div>
+	</div>
+	<!-- 下单分支保存地址结束 -->
+	<!-- 确认订单开始 -->
+	<div class="mask hide"></div>
+	<div id="confirm" class="hide">
+		<p>确认订单详情</p>
+		<div>
+			<label>服务日期：</label>
+			<span>2014年12月12日</span>
+		</div>
+		<div>
+			<label>服务时段：</label>
+			<span>15:00-17:00</span>
+		</div>
+		<div>
+			<label>预计金额：</label>
+			<span>150</span>
+		</div>
+		<label class="alert-label">提示：外送费用每单8元</label>
+		<div>
+			<label>订单编号：</label>
+			<span>20141212XP</span>
+		</div>
+		<a href="javascript:void(0);" id="confirmBtn">确认下单</a>
+	</div>
+	<!-- 确认订单结束 -->
+</body>
+</html>

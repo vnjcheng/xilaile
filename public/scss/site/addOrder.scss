@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+//
+// 功能说明：选择商品样式
+// @author maoxiaomi
+// @date 2015-01-05
+//
+
+
+@import "../base/reset";
+@import "../base/font-awesome";
+
+
+.prev-page, .title {
+	display: block;
+	color: $white;
+	background-color: $mainColor;
+	padding: 10px 0;
+	text-align: center;
+	font-size: $fontsize4;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+#addressList, #addAddress {
+	margin-top: 60px;
+	padding-bottom: 54px;
+}
+
+table {
+	margin-top: 10px;
+	width: 100%;
+	font-size: $fontsize4;
+	/*height: 100px;*/
+
+	tr > td:first-child {
+		width: 30%;
+		padding-left: 10px;
+		vertical-align: top;
+		height: 35px;
+		padding-top: 5px;
+	}
+
+	select, input, textarea {
+		width: 80%;
+		height: 30px;
+		border: 1px solid #ccc;
+		padding: 0 5px;
+	}
+
+	textarea {
+		height: 100px;
+		padding: 5px;
+	}
+}
+
+.line {
+	border-top: 1px solid #d8d8d8;
+	margin: 10px 0 20px 10px;
+}
+
+
+.list {
+	margin-top: 10px;
+	& > li {
+		background: #ededed;
+		padding: 10px;
+		font-size: $fontsize2;
+		margin-bottom: 10px;
+	}
+
+
+	.item {
+		position: relative;
+		.item-check {
+			position: absolute;
+			top: 50%;
+			margin-top: -7px;
+			left: 20px;
+		}
+		.item-info {
+			margin-left: 50px;
+		}
+	}
+
+	.operate {
+		text-align: right;
+		a {
+			display: inline-block;
+			padding: 1px 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-right: 5px;
+		}
+	}
+
+	.icon-plus {
+		color: $mainColor;
+		padding: 10px;
+	}
+}
+
+.bottom {
+	position: fixed;
+	width: 100%;
+	font-size: $fontsize6;
+	color: $white;
+	background-color: $mainColor2;
+	text-align: center;
+	bottom: 0;
+	a {
+		color: $white;
+		display: block;
+		padding: 10px 0;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.error {
+	border: 1px solid $mainColor1;
+}
+
+.mask {
+	background-color: $black;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+}
+
+#confirm {
+	position: fixed;
+	top: 100px;
+	background-color: $white;
+	width: 240px;
+	left: 50%;
+	margin-left: -120px;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	p {
+		font-size: $fontsize6;
+		text-align: center;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $fNormalGray;
+	}
+
+	& > div {
+		margin: 10px 0;
+
+		label {
+			margin-left: 15px;
+		}
+	}
+
+	.alert-label {
+		display: block;
+		padding: 10px;
+		margin-left: 13px;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+	}
+
+	a {
+		display: block;
+		width: 128px;
+		text-align: center;
+		background: $mainColor2;
+		color: $white;
+		font-size: $fontsize4;
+		padding: 5px;
+		border-radius: 4px;
+		position: relative;
+		left: 50%;
+		margin-left: -69px;
+	}
+}
